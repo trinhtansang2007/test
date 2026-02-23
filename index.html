@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Momo Signature', cursive;
+        }
+        body{
+            position: relative;
+        }
+        nav{
+            /* border: 2px rgb(6, 141, 17) solid; */
+            text-align: center;
+            width: 100%;
+        }
+        nav ul li{
+            display: inline-block;
+            padding: 10px;
+            font-size: 15px; 
+            transition: 0.3s;  
+        }
+        nav ul li:hover{
+            font-weight: bold;
+            background:rgb(74, 235, 74) ;
+        }
+        
+        .main-contents{
+            /* border: 2px rgb(226, 93, 93) solid; */
+            color: white;
+        }
+        .main-contents button{
+            width: 100px;
+            height: 30px; 
+            background: linear-gradient(to left, rgb(0, 187, 90), rgb(90, 90, 216));
+            color:aliceblue;
+            font-weight: bold;
+            border-radius: 90px;
+            border: none;
+            margin: 7px;
+            transition: 0.3s;
+        }
+        .main-contents button:hover{
+            width:120px;
+        }
+        .menu-icon{
+            border: 2px solid black;
+            background: white;
+            font-size: 30px;
+            position: fixed;
+            border-radius: 7px;
+            
+        }
+        .left-menu{
+            border: 2px solid black;
+            width: 50%;
+            height: 100vh;
+            background: white;
+            position: fixed;
+            display: none;
+            
+        }
+        .left-menu ul{
+            list-style: none;
+        }
+
+        .left-menu i{
+            font-size: 30px;
+            color: red;
+        }
+        .left-menu li{
+            padding: 10px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        .left-menu li:hover{
+           transform: translateX(20px);
+           color: green;
+        }
+         .services{
+            border: 2px red;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-gap: 20px;
+            background-color: rgb(99, 236, 225);
+        }
+        .services div{
+            border: 2px blue solid;
+            /* overflow: hidden; ẩn phân thừa */
+            overflow: hidden; 
+            text-align: center;
+            margin: 10px;
+            border-radius: 25px;
+            border: 5px blue solid;
+        }
+        .services img{
+            width: 100%;
+        }
+        .services button{
+            margin-bottom: 20px;
+            width: 100px;
+            height: 30px; 
+            background: linear-gradient(to left, rgb(0, 187, 90), rgb(90, 90, 216));
+            color:aliceblue;
+            font-weight: bold;
+            border-radius: 90px;
+            border: none;
+            margin: 7px;
+            transition: 0.4s;}
+
+    </style>
+</head>
+<body>
+<!-- Tao Menu -->
+ <div class="menu-icon">
+ <i class='bx bx-menu open-menu-icon'>
+</i>
+
+</div>
+<div class="left-menu" style="display:none;" >
+    <i class='bx bx-x disable-menu'></i>
+    <ul>
+        <li><a target="frame1" href="mainPage.html">FEATURE</a></li> 
+        <li><a target="frame1" href="about.html">ABOUT</a></li>
+        <li><a target="frame1" href="products.html">PRODUCTS</a></li>
+        <li><a target="frame1" href="service.html">SEVICE</a></li>
+        <li><a target="frame1" href="contact.html">CONTACT</a></li>
+    </ul>
+    </div>
+
+    <!-- top menu -->
+<nav>
+    <ul>
+        <li>FEATURE</li>
+        <li>ABOUT</li>
+        <li>PRODUCTS</li>
+        <li>SERVICE</li>
+        <li>CONTACT</li>
+    </ul>
+</nav>
+<!-- mã bổ sung -->
+ <iframe name="frame1" src="/mainPage.html" width="100%" height="500px" frameborder="1"></iframe>
+
+   
+    <script>
+        var disableIcon = document.querySelector('.disable-menu');
+        var leftMenu = document.querySelector('.left-menu');
+        var openMenuIcon = document.querySelector(".open-menu-icon")
+
+        disableIcon.addEventListener("click",function(){
+            console.log("ok");
+            leftMenu.style.display = "none";
+        })
+
+        openMenuIcon.addEventListener("click",function(){
+            leftMenu.style.display = "block";
+        })
+
+
+    </script>
+</body>
+</html>

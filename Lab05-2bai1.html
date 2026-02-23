@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Special TEA</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat";
+        }
+
+        body{
+            position: relative;
+        }
+
+        /* top menu */
+        nav{
+            /* border: 2px red solid; */
+            text-align: center;
+            width: 100%;
+        }
+
+        nav ul li{
+            display: inline-block;
+            padding: 10px;
+            font-size: 13px;
+            transition: 0.4s;
+        }
+
+        nav ul li:hover{
+            font-weight: bold;
+            background: rgb(184, 255, 184);
+        }
+
+        /* Main header */
+        .main-header{
+            width: 100%;
+            height: 700px;
+            text-align: center;
+            padding-top: 15%;
+            background: linear-gradient(to bottom,rgb(0,0,0,0.9),rgb(0,0,0,0.2)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmBbtz_Dl4q8qRgZNyo7dg0IHFy9YOCJ9Jxg&s") center/cover;
+        }
+
+        .main-contents{
+            color: white;
+        }
+
+        .main-contents h1{
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: -20px;
+            margin-bottom: 30px;
+
+            animation: slideInLeft 2s ease-out;
+        }
+
+        .main-contents button{
+            width: 100px;
+            height: 30px;
+            background: linear-gradient(to left,rgb(0, 187, 90),rgb(0, 197, 232));
+            color: white;
+            font-weight: bold;
+            border-radius: 90px;
+            border: none;
+            margin: 7px;
+            transition: 0.4s;
+
+            
+
+
+        }
+
+        .main-contents button:hover{
+            width: 120px;
+        }
+
+        /* Top menu icon */
+        .menu-icon{
+            border: 2px red solid;
+            background: white;
+            font-size: 30px;
+            position: fixed;
+            border-radius: 7px;
+            top: 30px;
+            left: 20px;
+        }
+
+        /* Menu bên trái */
+        .left-menu{
+            border: 2px rgb(255, 208, 0) solid;
+            position: fixed;
+            background: white;
+            width: 50%;
+            height: 100vh;
+            display: none;
+        }
+
+        .left-menu ul{
+            list-style: none;
+        }
+
+        .left-menu i{
+            font-size: 30px;
+            color: rgb(241, 50, 50);
+        }
+
+        .left-menu li{
+            padding: 10px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        .left-menu li:hover{
+            transform: translateX(20px);
+            color: green;
+        }
+
+
+        .slide {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideMenu {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main-contents h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    animation: slideInLeft 1.5s ease-out;
+}
+
+.main-contents button{
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(to left,rgb(0, 187, 90),rgb(0, 197, 232));
+    color: white;
+    font-weight: bold;
+    border-radius: 90px;
+    border: none;
+    margin: 7px;
+    transition: 0.4s;
+
+    animation: slideInUp 1.5s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Menu icon -->
+    <div class="menu-icon">
+        <i class='bx bx-menu open-menu-icon'></i>
+    </div>
+
+    <div class="left-menu ">
+        <i class='bx bx-x disable-menu'></i>
+         <ul>
+            <li><a target="frame2" href="mainPage.html">FEATURES</a></li>
+            <li><a target="frame2" href="about.html">ABOUT</a></li>
+            <li><a target="frame2" href="products.html">PRODUCTS</a></li>
+            <li><a target="frame2" href="services.html">SERVICES</a></li>
+            <li><a target="frame2" href="contacts.html">CONTACTS</a></li>
+        </ul>
+    </div>
+
+    <!-- Top menu -->
+    <nav>
+        <ul>
+            <li>FEATURES</li>
+            <li>ABOUT</li>
+            <li>PRODUCTS</li>
+            <li>SERVICES</li>
+            <li>CONTACTS</li>
+        </ul>
+    </nav>
+    <!-- main header -->
+    <div class="main-header">
+        <div class="main-contents">
+            <p>Over hunrred flavors of tea</p>
+            <h2>SPECIALLY CRAFTED TEA</h2>
+            <button>Explore</button>
+        </div>
+    </div>
+    
+    <iframe name="frame2" src="" width="100%" height="500px" frameborder="1"></iframe>
+
+
+ 
+
+
+
+    <script>
+
+        var disableIcon = document.querySelector('.disable-menu');
+        var leftMenu = document.querySelector('.left-menu');
+        var openMenuIcon = document.querySelector(".open-menu-icon")
+
+        disableIcon.addEventListener("click",function(){
+            console.log("ok");
+            leftMenu.style.display = "none";
+        })
+
+        openMenuIcon.addEventListener("click",function(){
+            leftMenu.style.display = "block";
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
